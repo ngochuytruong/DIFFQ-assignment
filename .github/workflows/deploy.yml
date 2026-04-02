@@ -29,7 +29,8 @@ jobs:
         run: pip install jupyter-book
 
       - name: Set baseurl for GitHub Pages
-        run: echo "  baseurl: /DIFFQ-assignment/" >> myst.yml
+        run: |
+          echo "  baseurl: /DIFFQ-assignment/" >> myst.yml
 
       - name: Build static HTML site
         run: jupyter-book build --html

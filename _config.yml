@@ -5,10 +5,16 @@ logo: ""
 execute:
   execute_notebooks: "off"
 
+repository:
+  url: https://github.com/ngochuytruong/DIFFQ-assignment
+  branch: main
+  path_to_book: .
+
 html:
   use_issues_button: false
   use_repository_button: false
   use_edit_page_button: false
+  use_download_button: true
 
 sphinx:
   extra_extensions: []

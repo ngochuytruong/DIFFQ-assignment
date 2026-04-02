@@ -28,8 +28,11 @@ jobs:
       - name: Install dependencies
         run: pip install jupyter-book
 
+      - name: Set baseurl for GitHub Pages
+        run: echo "  baseurl: /DIFFQ-assignment/" >> myst.yml
+
       - name: Build static HTML site
-        run: jupyter-book build --html --base-url /DIFFQ-assignment/
+        run: jupyter-book build --html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -25,15 +25,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install jupyter-book
+      - name: Install Jupyter Book 1.x
+        run: pip install "jupyter-book<2"
 
-      - name: Set baseurl for GitHub Pages
-        run: |
-          echo "  baseurl: /DIFFQ-assignment/" >> myst.yml
-
-      - name: Build static HTML site
-        run: jupyter-book build --html
+      - name: Build the book
+        run: jupyter-book build .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

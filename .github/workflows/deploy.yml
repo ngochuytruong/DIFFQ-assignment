@@ -29,7 +29,7 @@ jobs:
         run: pip install jupyter-book
 
       - name: Build static HTML site
-        run: jupyter-book build --html
+        run: jupyter-book build --html --base-url /DIFFQ-assignment/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

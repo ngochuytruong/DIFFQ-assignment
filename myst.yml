@@ -11,4 +11,3 @@ site:
     logo: ''
     folders: true
   template: book-theme
-  baseurl: /DIFFQ-assignment/
